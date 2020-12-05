@@ -1,5 +1,5 @@
 const http = require('http')
-const dishRouter = require('./routers/dishRouter')
+const dishRouter = require('../conFusionServer/routes/dishRouter')
 const express = require('express')
 const leaderRouter = require('./routers/leaderRouter')
 const promoRouter = require('./routers/promoRouter')
