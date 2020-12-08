@@ -1,0 +1,15 @@
+'use strict'
+const assert = require('assert');
+const store = require('../store');
+
+
+
+assert.rejects(async () => { return await store('something') }, Error('input must be a buffer'))
+
+assert.doesNotReject(async () => await store(Buffer.from("something")))
+
+  ; (async () => {
+    const res = await store(Buffer.from('something'))
+    assert.strictEqual(res.id.length, 4)
+  })()
+// return 0
